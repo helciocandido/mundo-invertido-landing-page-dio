@@ -5,17 +5,18 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./assets/css/styles.css">
    <title>Stranger Things - Mundo Invertido</title>
 </head>
 
-<body>
-   <header>
-      <audio id="music">
+<body class="light-theme" aria-label="O site está utilizando o tema light" role="body">
+   <header aria-label="Cabeçalho da página">
+      <audio id="music" autoplay>
          <source src="./assets/musics/normal-world.mpeg">
       </audio>
 
       <div class="header-content">
-         <img src="./assets/images/banner/logo.svg" alt="Imagem principal">
+         <img class="invert-element" src="./assets/images/banner/logo.svg" alt="Imagem principal">
          <p class="invert-element" role="text">
             Uma jornada para quem não tem medo do desconhecido. O caminho para o Mundo invertido é incerto, repleto de obstáculos e perigos. Porém, a recompensa é grande: salva Hawkings e o mundo todo das garras de Vecna. Você está preparado? Então clique no botão abaixo para entrar no Mundo Invertido!
          </p>
@@ -25,9 +26,10 @@
    </header>
 
    <main>
+      <div id="bottom-characters" class="world-characters"></div>
       <section id="section-inverted-world" class="container">
          <div class="section-texts">
-            <h1>O Mundo Invertido</h1>
+            <h2>O Mundo Invertido</h2>
             <p role="text">
                O Mundo Invertido parece uma cópia do nosso mundo, mas com criaturas horrendas, tempestades assustadoras, muita escuridão e entidades malignas. Um reino controlado por Vecna, que tem planos para trazer tudo isso ao nosso mundo.
             </p>
@@ -35,7 +37,7 @@
          <img class="invert-element" src="./assets/images/content/inverted-world.png" alt="Imagem ilustrativa do Mundo Invertido">
       </section>
 
-      <section id="section-inverted-world" class="container">
+      <section id="section-stranger-things-trailer" class="container">
          <div class="video-frame" aria-hidden="true">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/SJ9EFhQ3ANQ?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
          </div>
@@ -64,28 +66,32 @@
             </ul>
          </div>
       </section>
-      <section id="sectiob-form" class="container">
+      <section id="section-form" class="container">
          <h2>O Clube Dungeons and Drangons</h2>
          <p>
             Para deter Vecna, os heróis de Stranger Things também precisa de você. O Clube D&D mais famoso de Hawkings está com vagas abertas para sua proxima aventura. Se você é destemido, gosta de desafios e não tem medo de rodar o D20, chegou a hora de se inscrever para fazer parte da nova campanha.
          </p>
 
-         <dic class="form-container">
-            <form>
-               <label for="txtName">Nome Completo</label>
-               <input type="text" name="name" id="txtName">
+         <dic class="form-content">
+            <h3>Entre para o clube de D&D e tenha experiências de <span>outro mundo</span></h3>
 
-               <label for="txtEmail">E-mail</label>
-               <input type="text" name="email" id="txtEmail">
+            <div class="form-container">
+               <form>
+                  <label for="txtName">Nome Completo</label>
+                  <input type="text" name="name" id="txtName">
 
-               <label for="txtLevel">Level</label>
-               <input type="text" name="level" id="txtLevel">
+                  <label for="txtEmail">E-mail</label>
+                  <input type="text" name="email" id="txtEmail">
 
-               <label for="txtCharacter">Personagem</label>
-               <textarea type="text" name="character" cols="30" rows="10" id="txtCharacter"></textarea>
+                  <label for="txtLevel">Level</label>
+                  <input type="text" name="level" id="txtLevel">
 
-               <button type="button" id="btnSubscribe">Me inscrever</button>
-            </form>
+                  <label for="txtCharacter">Personagem</label>
+                  <textarea type="text" name="character" cols="30" rows="10" id="txtCharacter"></textarea>
+
+                  <button type="button" id="btnSubscribe">Me inscrever</button>
+               </form>
+            </div>
          </dic>
       </section>
    </main>
@@ -96,6 +102,8 @@
       </p>
       <img src="./assets/images/footer/logo.svg" alt="Logotipo Dio">
    </footer>
+
+   <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
