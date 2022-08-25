@@ -136,6 +136,16 @@ header::before {
    z-index: 0;
 }
 
+#volume-btn {
+   position: fixed;
+   right: 10px;
+   top: 10px;
+   z-index: 999;
+   padding: 1rem;
+   border: 2px solid var(--highlight-color);
+   color: var(--highlight-color);
+}
+
 .header-content {
    max-width: 700px;
    padding: 80px 20px;
