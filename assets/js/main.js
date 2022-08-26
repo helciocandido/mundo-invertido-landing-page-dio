@@ -1,3 +1,5 @@
+import { subscribeToHellfireClub } from './firebase/hellfire-club.js';
+
 const invertBtn = document.getElementById('switch-theme-button');
 const volumeBtn = document.getElementById('volume-btn');
 const volumeUp = '<span class="material-symbols-outlined"> volume_up </span>';
@@ -28,8 +30,21 @@ volumeBtn.addEventListener('click', () => {
   }
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-  const audio = document.getElementById('music');
-  audio.play();
-  audio.volume = 0;
+/*** * Form subscription * ***/
+
+const txtName = document.getElementById('txtName');
+const txtEmail = document.getElementById('txtEmail');
+const txtLevel = document.getElementById('txtLevel');
+const txtCharacter = document.getElementById('txtCharacter');
+const btnSubscribe = document.getElementById('btnSubscribe');
+
+btnSubscribe.addEventListener('click', async () => {
+  const subscription = {
+    name: txtName.value,
+    email: txtEmail.value,
+    level: txtLevel.value,
+    character: txtCharacter.value,
+  };
+  const subscriptionID = await subscribeToHellfireClub(subscription);
+  console.log(subscriptionID);
 });
