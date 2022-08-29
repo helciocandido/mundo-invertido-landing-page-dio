@@ -47,4 +47,9 @@ btnSubscribe.addEventListener('click', async () => {
   };
   const subscriptionID = await subscribeToHellfireClub(subscription);
   console.log(subscriptionID);
+
+  txtName.value = '';
+  txtEmail.value = '';
+  txtLevel.value = '';
+  txtCharacter.value = '';
 });
